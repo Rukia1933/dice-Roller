@@ -1,0 +1,93 @@
+fun main() {
+    val d1Range: IntRange = 1..6
+    val d2Range: IntRange = 1..8
+    val d3Range: IntRange = 1..10
+    val d4Range: IntRange = 1..20
+    val d5Range: IntRange = 1..100
+    
+    val randomNumber1 = d1Range.random()
+    val randomNumber2 = d2Range.random()
+    val randomNumber3 = d3Range.random()
+    val randomNumber4 = d4Range.random()
+    val randomNumber5 = d5Range.random()
+    
+    val myFirstDice = Dice()
+    //println("First Dice sides: ${myFirstDice.d1Sides}")
+    //println("Roll: ${randomNumber1}")
+    println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    println()
+    myFirstDice.roll1()
+    println()
+    println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    println()
+    
+    val mySeccondDice = Dice()
+    //println("Seccond Dice sides: ${mySeccondDice.d2Sides}")
+    //println("Roll: ${randomNumber2}")
+    mySeccondDice.roll2()
+    println()
+    println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    println()
+    
+    val myThirdDice = Dice()
+    //println("Third Dice sides: ${myThirdDice.d3Sides}")
+    //println("Roll: ${randomNumber3}")
+    myThirdDice.roll3()
+    println()
+    println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    println()
+    
+    val myForthDice = Dice()
+    //println("Forth Dice sides: ${myForthDice.d4Sides}")
+    //println("Roll: ${randomNumber4}")
+    myForthDice.roll4()
+    println()
+    println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    println()
+    
+    val myFifthDice = Dice()
+    //println("Fifth Dice sides: ${myFifthDice.d5Sides}")
+    //println("Roll: ${randomNumber5}")
+    myFifthDice.roll5()
+    println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    println()
+}
+
+class Dice {
+    var d1Sides = 6
+    var d2Sides = 8
+    var d3Sides = 10
+    var d4Sides = 20
+    var d5Sides = 100
+    
+    fun roll1() {
+        repeat(6){
+            val randomNumberA = (1..6).random()
+        	println("Your ${d1Sides} sided dice rolled a ${randomNumberA}")
+        }
+    }
+    fun roll2() {
+        repeat(6){
+            val randomNumberB = (1..8).random()
+        	println("Your ${d2Sides} sided dice rolled a ${randomNumberB}")
+        }
+    }
+    fun roll3() {
+        repeat(6){
+            val randomNumberC = (1..10).random()
+        	println("Your ${d3Sides} sided dice rolled a ${randomNumberC}")
+        }
+    }
+    fun roll4() {
+        repeat(6){
+            val randomNumberD = (1..20).random()
+        	println("Your ${d4Sides} sided dice rolled a ${randomNumberD}")
+        }
+    }
+    fun roll5() {
+        repeat(6){
+            val randomNumberE = (1..100).random()
+        	println("Your ${d5Sides} sided dice rolled a ${randomNumberE}")
+        }
+    }
+}
