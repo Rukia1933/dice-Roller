@@ -1,0 +1,16 @@
+fun main() {
+    val myFirstDice = Dice()
+    repeat(6){
+    val diceRoll = myFirstDice.roll1() 
+    println("Your ${myFirstDice.d6Sides} sided Purple dice rolled a ${diceRoll}!")
+    }
+}    
+    
+class Dice {
+    var d6Sides = 6
+    
+    fun roll1(): Int {
+            val randomNumber = (1..6).random()
+            return randomNumber
+    }
+}    
