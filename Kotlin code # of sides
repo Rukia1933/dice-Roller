@@ -1,0 +1,113 @@
+fun main() {
+   
+    val myFirstDice = Dice()
+    val diceRoll = myFirstDice.roll()
+    println("Your ${myFirstDice.sides} sided dice rolled ${diceRoll}!")
+
+    myFirstDice.sides = 20
+    println("Your ${myFirstDice.sides} sided dice rolled ${myFirstDice.roll()}!")
+}
+
+class Dice {
+    var sides = 6
+
+    fun roll(): Int {
+        val randomNumber = (1..sides).random()
+        return randomNumber
+    }
+}
+
+
+class Dice(val numSides: Int) {
+   // Code inside does not change.
+}
+
+
+class Dice (val numSides: Int) {
+
+    fun roll(): Int {
+        val randomNumber = (1..numSides).random()
+        return randomNumber
+    }
+}
+
+
+val myFirstDice = Dice(6)
+
+
+fun main() {
+    val myFirstDice = Dice(6)
+    val diceRoll = myFirstDice.roll()
+    println("Your ${myFirstDice.numSides} sided dice rolled ${diceRoll}!")
+}
+
+
+
+val mySecondDice = Dice(20)
+
+
+println("Your ${mySecondDice.numSides} sided dice rolled  ${mySecondDice.roll()}!")
+
+
+
+
+
+
+
+
+
+
+
+fun main() {
+    val myFirstDice = Dice(6)
+    val diceRoll = myFirstDice.roll()
+    println("Your ${myFirstDice.numSides} sided dice rolled ${diceRoll}!")
+    
+    val mySecondDice = Dice(20)
+    println("Your ${mySecondDice.numSides} sided dice rolled ${mySecondDice.roll()}!")
+}
+
+class Dice (val numSides: Int) {
+
+    fun roll(): Int {
+        val randomNumber = (1..numSides).random()
+        return randomNumber
+    }
+}
+
+
+
+
+
+
+//Change the return statement to return the random number directly.
+
+
+fun roll(): Int {
+    return (1..numSides).random()
+}
+
+
+//Call myFirstDice.roll() in the string template and delete the diceRoll variable. The first two lines of your main() code now look like this.
+
+val myFirstDice = Dice(6)
+println("Your ${myFirstDice.numSides} sided dice rolled ${myFirstDice.roll()}!")
+
+
+
+//This is your final code after refactoring it .
+
+fun main() {
+    val myFirstDice = Dice(6)
+    println("Your ${myFirstDice.numSides} sided dice rolled ${myFirstDice.roll()}!")
+    
+    val mySecondDice = Dice(20)
+    println("Your ${mySecondDice.numSides} sided dice rolled ${mySecondDice.roll()}!")
+}
+
+class Dice (val numSides: Int) {
+
+    fun roll(): Int {
+        return (1..numSides).random()
+    }
+}
