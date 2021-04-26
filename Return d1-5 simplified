@@ -1,0 +1,65 @@
+fun main() {
+    val myFirstDice = Dice()
+    repeat(6){
+    val diceRoll = myFirstDice.roll1() 
+    println("Your ${myFirstDice.d1Sides} sided dice rolled a ${diceRoll}!")
+    }
+    println()
+    
+    val mySeccondDice = Dice()
+    repeat(6){
+    val diceRoll = myFirstDice.roll2() 
+    println("Your ${mySeccondDice.d2Sides} sided dice rolled a ${diceRoll}!")
+    }
+    println()
+    
+    val myThirdDice = Dice()
+    repeat(6){
+    val diceRoll = myThirdDice.roll3() 
+    println("Your ${myThirdDice.d3Sides} sided dice rolled a ${diceRoll}!")
+    }
+    println()
+    
+    val myForthDice = Dice()
+    repeat(6){
+    val diceRoll = myForthDice.roll4() 
+    println("Your ${myForthDice.d4Sides} sided dice rolled a ${diceRoll}!")
+    }
+    println()
+    
+    val myFifthDice = Dice()
+    repeat(6){
+    val diceRoll = myFifthDice.roll5() 
+    println("Your ${myFifthDice.d5Sides} sided dice rolled a ${diceRoll}!")
+    }
+    println()
+}
+
+class Dice {
+    var d1Sides = 6
+    var d2Sides = 8
+    var d3Sides = 10
+    var d4Sides = 20
+    var d5Sides = 100
+    
+    fun roll1(): Int {
+            val randomNumberA = (1..6).random()
+        	return randomNumberA
+    }
+    fun roll2(): Int {
+            val randomNumberB = (1..8).random()
+        	return randomNumberB
+    }
+    fun roll3(): Int {
+            val randomNumberC = (1..10).random()
+        	return randomNumberC
+    }
+    fun roll4(): Int {
+            val randomNumberD = (1..20).random()
+        	return randomNumberD
+    }
+    fun roll5(): Int {
+            val randomNumberE = (1..100).random()
+        	return randomNumberE
+    }
+}
